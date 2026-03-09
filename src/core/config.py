@@ -29,6 +29,16 @@ class Settings(BaseSettings):
         description="RabbitMQ connection URL",
     )
 
+    # gRPC Client
+    auth_grpc_client_host: str = Field(
+        default="localhost",
+        description="Host for the auth gRPC client",
+    )
+    auth_grpc_client_port: int = Field(
+        default=50051,
+        description="Port for the auth gRPC client",
+    )
+
     # Logging
     log_level: str = Field(
         default="INFO",
