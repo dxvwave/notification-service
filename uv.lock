@@ -160,7 +160,7 @@ wheels = [
 [[package]]
 name = "contracts"
 version = "0.1.1"
-source = { git = "https://github.com/dxvwave/contracts.git#414703bcdeb69a7b86769de2e73ab6e38ab8baa0" }
+source = { git = "https://github.com/dxvwave/contracts.git?rev=0.1.1#414703bcdeb69a7b86769de2e73ab6e38ab8baa0" }
 dependencies = [
     { name = "grpcio" },
     { name = "grpcio-tools" },
@@ -564,6 +564,7 @@ dependencies = [
     { name = "contracts" },
     { name = "fastapi", extra = ["standard"] },
     { name = "pydantic-settings" },
+    { name = "shared" },
     { name = "sqlalchemy", extra = ["asyncio"] },
     { name = "tenacity" },
 ]
@@ -579,9 +580,10 @@ requires-dist = [
     { name = "aiosqlite", specifier = ">=0.22.1" },
     { name = "alembic", specifier = ">=1.18.3" },
     { name = "asyncpg", specifier = ">=0.31.0" },
-    { name = "contracts", git = "https://github.com/dxvwave/contracts.git" },
+    { name = "contracts", git = "https://github.com/dxvwave/contracts.git?rev=0.1.1" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.128.0" },
     { name = "pydantic-settings", specifier = ">=2.12.0" },
+    { name = "shared", git = "https://github.com/dxvwave/shared.git?rev=0.1.0" },
     { name = "sqlalchemy", extras = ["asyncio"], specifier = ">=2.0.46" },
     { name = "tenacity", specifier = ">=9.1.4" },
 ]
@@ -922,6 +924,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/4f/db/cfac1baf10650ab4d1c111714410d2fbb77ac5a616db26775db562c8fab2/setuptools-82.0.1.tar.gz", hash = "sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9", size = 1152316, upload-time = "2026-03-09T12:47:17.221Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9d/76/f789f7a86709c6b087c5a2f52f911838cad707cc613162401badc665acfe/setuptools-82.0.1-py3-none-any.whl", hash = "sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb", size = 1006223, upload-time = "2026-03-09T12:47:15.026Z" },
+]
+
+[[package]]
+name = "shared"
+version = "0.1.0"
+source = { git = "https://github.com/dxvwave/shared.git?rev=0.1.0#b94a5eff999be3d7456978b90e2d602a93f44797" }
+dependencies = [
+    { name = "contracts" },
+    { name = "fastapi" },
+    { name = "grpcio" },
+    { name = "protobuf" },
+    { name = "sqlalchemy", extra = ["asyncio"] },
 ]
 
 [[package]]

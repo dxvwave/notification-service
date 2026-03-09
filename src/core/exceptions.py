@@ -1,40 +1,13 @@
 from fastapi import status
 
-
-class ApplicationException(Exception):
-    """Base exception for the application."""
-
-    def __init__(self, message: str):
-        self.message = message
-
-
-class AuthenticationError(ApplicationException):
-    """Raised when authentication fails."""
-
-    pass
-
-
-class UnauthorizedError(AuthenticationError):
-    """Raised when a user is not authorized to perform an action."""
-
-    pass
-
-
-class InactiveUserError(AuthenticationError):
-    """Raised when an inactive user attempts to perform an action."""
-
-    pass
+from shared.exceptions import ApplicationException, AuthenticationError, UnauthorizedError, InactiveUserError  # noqa: F401
 
 
 class SubscriptionNotFoundError(ApplicationException):
-    """Raised when a subscription does not exist."""
-
     pass
 
 
 class SubscriptionAlreadyExistsError(ApplicationException):
-    """Raised when a subscription already exists."""
-
     pass
 
 
